@@ -6,6 +6,8 @@ import store from '../store.ts';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import PostList from './componets/PostList.tsx';
 import Post from './componets/Post.tsx';
+import Products from './componets/Products.tsx';
+import AddProduct from './componets/AddProduct.tsx';
 
 const router = createBrowserRouter([
   {
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
   {
     path:"/post/:id",
     element:<Post/>
+  },
+  {
+    path:"/products",
+    element:<Products/>
+  },
+  {
+    path:"/addProducts",
+    element:<AddProduct/>
   }
 ])
 

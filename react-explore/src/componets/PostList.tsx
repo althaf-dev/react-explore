@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useGetAllPostsQuery } from '../apis/postApi';
 
 interface PostListProps{
@@ -15,7 +15,9 @@ function PostList({n = 5}:PostListProps) {
 
   return (
     <div>
+      <Link to={"/products"}>Products</Link>
       <h1>PostList</h1>
+
       <ul>
         {data?.slice(0,n).map((item: any) => (
           <li onClick={handleClick.bind(null,item.id)} >{item.title}</li>
